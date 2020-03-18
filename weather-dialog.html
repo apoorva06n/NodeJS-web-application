@@ -1,0 +1,27 @@
+<h1 mat-dialog-title style="background-color: #5488a1;margin: 0px; padding:2%">
+  {{data.date}}
+  <i class="material-icons" style="font-size:16px;float:right" (click)="onClickClose()">close</i>
+</h1>
+<div mat-dialog-content style="color:black;background-color: #88d4eb; padding: 1% 5%; margin:0px;">
+  <table>
+  	<tr>
+	  	<td style='width:80%;overflow: visible;overflow-wrap: break-word;'>
+	  	<br><span style='font-size:24px;'>{{data.city}}</span><br>
+	  	<span style='font-size:28px;'>{{data.temperature}}</span>
+	    <img class='temp_icon' src='https://cdn3.iconfinder.com/data/icons/virtual-notebook/16/button_shape_oval-512.png'>
+	    <span style='font-size:28px'>F</span><br>
+	    <span style='font-size:12px;'>{{data.summary}}</span>
+		</td>
+	    <td>
+	    	<img style='width:100%' src='{{data.iconurl}}'>
+	    </td>
+	</tr></table>
+	<hr style="border-top: 1px solid #bfbfbf;margin: 3% 0;">
+	<div id="modal_table">
+		Precipitation : {{data.precipitation}}<br>
+		Chance of Rain : {{data.precip_prob}} %<br>
+		Wind Speed : {{data.windSpeed}} mph<br>
+		Humidity : {{data.humidity}} %<br>
+		visibility : {{data.visibility}} miles
+	</div>
+</div>
